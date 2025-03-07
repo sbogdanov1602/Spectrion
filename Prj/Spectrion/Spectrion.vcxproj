@@ -190,8 +190,11 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CFileToCchDialog.h" />
+    <ClInclude Include="CHAlg.h" />
     <ClInclude Include="colors.h" />
     <ClInclude Include="CommonFunc.h" />
+    <ClInclude Include="CompressAlg.h" />
     <ClInclude Include="CursorsDlg.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="DfxCached.h" />
@@ -229,11 +232,15 @@
     <ClInclude Include="SpectrionView.h" />
     <ClInclude Include="stl_hdr.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ThreadFunc.h" />
     <ClInclude Include="Timers.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CFileToCchDialog.cpp" />
+    <ClCompile Include="CHAlg.cpp" />
     <ClCompile Include="colors.cpp" />
     <ClCompile Include="CommonFunc.cpp" />
+    <ClCompile Include="CompressAlg.cpp" />
     <ClCompile Include="CursorsDlg.cpp" />
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="DfxCached.cpp" />
