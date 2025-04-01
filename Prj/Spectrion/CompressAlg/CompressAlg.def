@@ -1,0 +1,4 @@
+LIBRARY	CompressAlg
+EXPORTS
+GetCompressed
+GetDecompressed
