@@ -3,6 +3,7 @@
 #include "Resource.h"
 #include "GridCtrl.h"
 
+const int 	PortDataSize = 4096;
 const int C_PARAMETERS_NAME = 0;
 const int C_PARAMETERS_VALUE = 1;
 
@@ -24,6 +25,9 @@ public:
 protected:
 	CGridCtrl m_Grid;
 	CSize m_szMinimum;
+	CString m_Port_Name;
+	HANDLE  m_Port;
+	int     m_Port_Speed;
 	map<int, int> m_RowParam;
 	map<int, Ui_Parameter> m_ParamValues;
 	GroupMap& m_groupMapRef = GetParamGroups();
@@ -35,6 +39,11 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	virtual BOOL OnInitDialog();
 	void FillGrid();
+	void LoadComPorts();
+	int ComConfig(void);
+	bool LoadParametersFromDevice();
+	bool PutParametersToDevice();
+	bool DoWrite(byte* bytes);
 
 	DECLARE_MESSAGE_MAP()
 
@@ -45,4 +54,8 @@ public:
 	afx_msg void CParametersDlg::OnBeginEditGrid(NMHDR* pNotifyStruct, LRESULT* result);
 	afx_msg void OnBnClickedBtnPutToController();
 	afx_msg void OnBnClickedBtnLoadFromController();
+	CComboBox m_PortName;
+	CComboBox m_PortSpeed;
+	afx_msg void OnCbnSelchangeCmbSpeed();
+	afx_msg void OnCbnSelchangeCmbPort();
 };
