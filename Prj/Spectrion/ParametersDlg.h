@@ -30,9 +30,10 @@ protected:
 	int     m_Port_Speed;
 	map<int, int> m_RowParam;
 	map<int, Ui_Parameter> m_ParamValues;
-	GroupMap& m_groupMapRef = GetParamGroups();
-	GroupParameterInfosMap& m_groupParamsRef = GetGroupParameterInfos();
-	ParameterInfosMap& m_paramInfosRef = GetParameterInfos();
+	GroupMap* m_groupMapRef;// = GetParamGroups();
+	GroupParameterInfosMap* m_groupParamsRef;// = GetGroupParameterInfos();
+	ParameterInfosMap* m_paramInfosRef;// = GetParameterInfos();
+	CString m_CurValue;
 	
 	void CParametersDlg::PrepareGrid();
 
@@ -40,10 +41,9 @@ protected:
 	virtual BOOL OnInitDialog();
 	void FillGrid();
 	void LoadComPorts();
-	int ComConfig(void);
+	bool ComConfig(void);
 	bool LoadParametersFromDevice();
 	bool PutParametersToDevice();
-	bool DoWrite(byte* bytes);
 
 	DECLARE_MESSAGE_MAP()
 

@@ -97,13 +97,13 @@
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir)\gridctrl;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\gridctrl;$(SolutionDir)ImsDeviceSettings</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(ProjectDir)FTD2XX.lib;$(OutDir)CHAlg.lib;$(OutDir)ImsDeviceSettings.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)FTD2XX.lib;$(OutDir)CHAlg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -124,11 +124,11 @@
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\gridctrl;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\gridctrl;$(SolutionDir)ImsDeviceSettings</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>$(ProjectDir)FTD2XX.lib;$(OutDir)CHAlg.lib;$(OutDir)ImsDeviceSettings.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)FTD2XX.lib;$(OutDir)CHAlg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -207,6 +207,7 @@
     <ClInclude Include="FileSystem.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="FTD2XX.H" />
+    <ClInclude Include="GlobVar.h" />
     <ClInclude Include="gridctrl\CellRange.h" />
     <ClInclude Include="gridctrl\GridCell.h" />
     <ClInclude Include="gridctrl\GridCellBase.h" />
