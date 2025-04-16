@@ -40,19 +40,11 @@ BOOL ProgressBarDlg::OnInitDialog()
 }
 
 BEGIN_MESSAGE_MAP(ProgressBarDlg, CDialog)
-	ON_BN_CLICKED(ID_BTN_STOP, &ProgressBarDlg::OnBnClickedBtnStop)
 	ON_BN_CLICKED(IDABORT, &ProgressBarDlg::OnBnClickedAbort)
 END_MESSAGE_MAP()
 
 
 // ProgressBarDlg message handlers
-
-void ProgressBarDlg::OnBnClickedBtnStop()
-{
-	//m_ProgressBar.Fini
-	m_Stopped = true;
-	CDialog::OnCancel();
-}
 
 void ProgressBarDlg::StepIt() 
 {

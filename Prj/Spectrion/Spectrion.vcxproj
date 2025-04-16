@@ -196,6 +196,8 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Experiment.h" />
+    <ClInclude Include="ExperimentSelectionDlg.h" />
     <ClInclude Include="CFileToCchDialog.h" />
     <ClInclude Include="colors.h" />
     <ClInclude Include="CommonFunc.h" />
@@ -251,6 +253,8 @@
     <ClCompile Include="DfxCached.cpp" />
     <ClCompile Include="DirDialog.cpp" />
     <ClCompile Include="DirectoryRestorer.cpp" />
+    <ClCompile Include="Experiment.cpp" />
+    <ClCompile Include="ExperimentSelectionDlg.cpp" />
     <ClCompile Include="gridctrl\GridCell.cpp" />
     <ClCompile Include="gridctrl\GridCellBase.cpp" />
     <ClCompile Include="gridctrl\GridCellCheck.cpp" />

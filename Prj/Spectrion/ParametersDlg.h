@@ -14,7 +14,7 @@ class CParametersDlg : public CDialog
 	DECLARE_DYNAMIC(CParametersDlg)
 
 public:
-	CParametersDlg(CWnd* pParent = nullptr);   // standard constructor
+	CParametersDlg(CWnd* pParent = nullptr, map<int, Ui_Parameter>* paramValues = nullptr);   // standard constructor
 	virtual ~CParametersDlg();
 
 // Dialog Data
@@ -29,11 +29,13 @@ protected:
 	HANDLE  m_Port;
 	int     m_Port_Speed;
 	map<int, int> m_RowParam;
+	map<int, Ui_Parameter>* m_pExternalParamValues;
 	map<int, Ui_Parameter> m_ParamValues;
 	GroupMap* m_groupMapRef;// = GetParamGroups();
 	GroupParameterInfosMap* m_groupParamsRef;// = GetGroupParameterInfos();
 	ParameterInfosMap* m_paramInfosRef;// = GetParameterInfos();
 	CString m_CurValue;
+	bool m_bParamsWereSent;
 	
 	void CParametersDlg::PrepareGrid();
 
@@ -44,7 +46,8 @@ protected:
 	bool ComConfig(void);
 	bool LoadParametersFromDevice();
 	bool PutParametersToDevice();
-
+	void ReturnDataBack();
+	void LoadData();
 	DECLARE_MESSAGE_MAP()
 
 public:

@@ -29,7 +29,6 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnBnClickedBtnStop();
 	bool IsStopped() const { return m_Stopped; };
 	void StepIt();
 	void SetMaxBarValue(int maxBarValue);
