@@ -9,6 +9,9 @@ public:
 	CString m_ExperimentName;
 	CString m_ExperimentDir;
 	map<int, Ui_Parameter> m_ParamValues;
+	void InitDeviceParameters();
+	void LoadDeviceParameters();
+	void SaveDeviceParameters();
 	void Init();
 	void Save();
 	void Load();

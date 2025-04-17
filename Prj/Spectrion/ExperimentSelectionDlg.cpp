@@ -60,8 +60,8 @@ BOOL CExperimentSelectionDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 	int idx = CB_ERR;
-	m_IsNewExperiment.SetCheck(1);
-	if (theApp.FindSubFolders(theApp.m_DataDir, m_Experiments)) {
+	m_IsNewExperiment.SetCheck(0);
+	if (FindSubFolders(theApp.m_DataDir, m_Experiments)) {
 		auto count = m_Experiments.GetCount();
 		for (int i = 0; i < count; i++) {
 			auto s = m_Experiments.GetAt(m_Experiments.FindIndex(i));
@@ -82,7 +82,7 @@ BOOL CExperimentSelectionDlg::OnInitDialog()
 			}
 		}
 	}
-
+	OnBnClickedNewExperiment();
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// EXCEPTION: OCX Property Pages should return FALSE
 }
