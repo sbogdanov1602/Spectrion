@@ -15,6 +15,7 @@ public:
 	void Init();
 	void Save();
 	void Load();
+	bool LoadParametersFromDevice();
 protected:
 	CString m_FileInit = _T("SpecTest.ini");
 	CString m_FileInit2 = _T("Spectrion.ini");
