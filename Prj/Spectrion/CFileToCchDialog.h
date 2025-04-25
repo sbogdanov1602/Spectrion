@@ -29,13 +29,16 @@ protected:
 
 	CString m_SmpFilesDir;
 	CString m_CchFilePathS;
+	bool m_IsSmpFilesMustDeleted;
 public:
 	CEdit m_FilesDirectory;
 	CEdit m_CchFilePath;
 
 	CString GetSmpFilesDirectory();
 	CString GetCchFilePath();
+	bool SmpFilesMustDelete() {	return m_IsSmpFilesMustDeleted;	}
 
 	afx_msg void OnBnClickedBtnSmpFiles();
 	afx_msg void OnBnClickedBtnCchFile();
+	afx_msg void OnBnClickedChkDeleteSmpFiles();
 };

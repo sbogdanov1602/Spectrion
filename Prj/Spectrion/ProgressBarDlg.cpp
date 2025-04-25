@@ -34,7 +34,7 @@ BOOL ProgressBarDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 	GetDlgItem(IDC_PROCESS_NAME)->SetWindowText(m_ProcessName);
-	m_ProgressBar.SetRange(1, m_MaxBarValue);
+	m_ProgressBar.SetRange(0, m_MaxBarValue);
 	m_ProgressBar.SetStep(m_Step);
 	return true;
 }
@@ -49,7 +49,11 @@ END_MESSAGE_MAP()
 void ProgressBarDlg::StepIt() 
 {
 	m_ProgressBar.StepIt(); 
-//	GetDlgItem(IDABORT)->SetFocus();
+}
+
+void ProgressBarDlg::SetPos(int pos)
+{
+	m_ProgressBar.SetPos(pos);
 }
 
 void ProgressBarDlg::SetMaxBarValue(int maxBarValue)

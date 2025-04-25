@@ -1,4 +1,5 @@
 #pragma once
+#include <afxstr.h>
 using namespace std;
 
 class CExperiment

@@ -10,4 +10,5 @@ struct ThreadData
 	CString CchFilePath;
 	ProgressBarDlg* pProgressBarDlg;
 	HWND hWnd;
+	bool SmpFilesMustDelete;
 };

@@ -16,6 +16,7 @@ IMPLEMENT_DYNAMIC(CFileToCchDialog, CDialogEx)
 CFileToCchDialog::CFileToCchDialog(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_FILE_TO_CCH_DIALOG, pParent)
 {
+	m_IsSmpFilesMustDeleted = false;
 }
 
 CFileToCchDialog::~CFileToCchDialog()
@@ -34,6 +35,7 @@ void CFileToCchDialog::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CFileToCchDialog, CDialogEx)
 	ON_BN_CLICKED(IDC_BTN_SMP_FILES, OnBnClickedBtnSmpFiles)
 	ON_BN_CLICKED(IDC_BTN_CCH_FILE, OnBnClickedBtnCchFile)
+	ON_BN_CLICKED(IDC_CHK_DELETE_SMP_FILES, &CFileToCchDialog::OnBnClickedChkDeleteSmpFiles)
 END_MESSAGE_MAP()
 
 
@@ -108,4 +110,9 @@ BOOL CFileToCchDialog::OnInitDialog()
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// EXCEPTION: OCX Property Pages should return FALSE
+}
+
+void CFileToCchDialog::OnBnClickedChkDeleteSmpFiles()
+{
+	m_IsSmpFilesMustDeleted = ((CButton*)GetDlgItem(IDC_CHK_DELETE_SMP_FILES))->GetCheck();
 }

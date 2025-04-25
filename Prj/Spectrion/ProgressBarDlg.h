@@ -32,5 +32,6 @@ public:
 	bool IsStopped() const { return m_Stopped; };
 	void StepIt();
 	void SetMaxBarValue(int maxBarValue);
+	void SetPos(int pos);
 	afx_msg void OnBnClickedAbort();
 };
