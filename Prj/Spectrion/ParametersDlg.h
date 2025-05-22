@@ -15,6 +15,7 @@ class CParametersDlg : public CDialog
 public:
 	CParametersDlg(CWnd* pParent = nullptr, map<int, Ui_Parameter>* paramValues = nullptr);   // standard constructor
 	virtual ~CParametersDlg();
+	void RefreshDialog(map<int, Ui_Parameter>* paramValues);
 
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
