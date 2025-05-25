@@ -196,6 +196,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="COMParamsDlg.h" />
     <ClInclude Include="Experiment.h" />
     <ClInclude Include="ExperimentSelectionDlg.h" />
     <ClInclude Include="CFileToCchDialog.h" />
@@ -249,6 +250,7 @@
     <ClCompile Include="CFileToCchDialog.cpp" />
     <ClCompile Include="colors.cpp" />
     <ClCompile Include="CommonFunc.cpp" />
+    <ClCompile Include="COMParamsDlg.cpp" />
     <ClCompile Include="CursorsDlg.cpp" />
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="DfxCached.cpp" />

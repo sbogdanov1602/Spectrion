@@ -39,7 +39,7 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	virtual BOOL OnInitDialog();
 	void FillGrid();
-	void LoadComPorts();
+	//void LoadComPorts();
 	bool ComConfig(void);
 	bool LoadParametersFromDevice();
 	bool PutParametersToDevice();
@@ -54,9 +54,9 @@ public:
 	afx_msg void CParametersDlg::OnBeginEditGrid(NMHDR* pNotifyStruct, LRESULT* result);
 	afx_msg void OnBnClickedBtnPutToController();
 	afx_msg void OnBnClickedBtnLoadFromController();
-	CComboBox m_PortName;
-	CComboBox m_PortSpeed;
-	afx_msg void OnCbnSelchangeCmbSpeed();
-	afx_msg void OnCbnSelchangeCmbPort();
+	//CComboBox m_PortName;
+	//CComboBox m_PortSpeed;
+	//afx_msg void OnCbnSelchangeCmbSpeed();
+	//afx_msg void OnCbnSelchangeCmbPort();
 	afx_msg void OnBnClickedCancel();
 };
