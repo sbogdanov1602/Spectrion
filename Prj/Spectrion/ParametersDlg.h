@@ -45,6 +45,7 @@ protected:
 	bool PutParametersToDevice();
 	void ReturnDataBack();
 	void LoadData();
+	void PrepareGridAndRefresh();
 	DECLARE_MESSAGE_MAP()
 
 public:
