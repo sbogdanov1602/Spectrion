@@ -33,7 +33,10 @@ protected:
 	ParameterInfosMap* m_paramInfosRef;
 	CString m_CurValue;
 	bool m_bParamsWereSent;
-	
+
+	COLORREF m_defaultBkColour;
+	COLORREF m_changedBkColour;
+
 	void PrepareGrid();
 
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
