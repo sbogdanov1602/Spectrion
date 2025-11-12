@@ -8,5 +8,10 @@ public:
 		: CParametersDlg(pParent, paramValues) {};   // standard constructor
 
 	virtual BOOL OnInitDialog();
+
+protected:
+
+	virtual bool LoadParametersFromDevice();
+	virtual bool PutParametersToDevice();
 };
 

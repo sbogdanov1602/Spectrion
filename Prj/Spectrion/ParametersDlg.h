@@ -41,11 +41,13 @@ protected:
 	void FillGrid();
 	//void LoadComPorts();
 	bool ComConfig(void);
-	bool LoadParametersFromDevice();
-	bool PutParametersToDevice();
 	void ReturnDataBack();
 	void LoadData();
 	void PrepareGridAndRefresh();
+
+	virtual bool LoadParametersFromDevice();
+	virtual bool PutParametersToDevice();
+
 	DECLARE_MESSAGE_MAP()
 
 public:

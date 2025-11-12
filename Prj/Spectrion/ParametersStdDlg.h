@@ -8,5 +8,8 @@ public:
 	CParametersStdDlg(CWnd* pParent = nullptr, map<int, Ui_Parameter>* paramValues = nullptr)
 		: CParametersDlg(pParent, paramValues) {};   // standard constructor
 	virtual BOOL OnInitDialog();
+protected:
+	virtual bool LoadParametersFromDevice();
+	virtual bool PutParametersToDevice();
 };
 
