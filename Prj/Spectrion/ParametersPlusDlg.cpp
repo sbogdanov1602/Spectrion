@@ -19,7 +19,7 @@ BOOL CParametersPlusDlg::OnInitDialog()
 bool CParametersPlusDlg::LoadParametersFromDevice()
 {
 	bool ret = false;
-	ret = ParamReadWrite.Load4ByteParametersFromDevice();
+	ret = ParamReadWrite.Load4ByteParametersFromDevice(m_paramInfosRef);
 	if (ret)
 	{
 		auto paramsValues = ParamReadWrite.GetParameters();
@@ -41,7 +41,7 @@ bool CParametersPlusDlg::PutParametersToDevice()
 		}
 	}
 
-	m_bParamsWereSent = ParamReadWrite.Put4ByteParametersToDevice(paramValues);
+	m_bParamsWereSent = ParamReadWrite.Put4ByteParametersToDevice(paramValues, m_paramInfosRef);
 
 	if (m_bParamsWereSent) {
 		for (auto it = m_ParamValues.begin(); it != m_ParamValues.end(); it++) {
@@ -50,5 +50,5 @@ bool CParametersPlusDlg::PutParametersToDevice()
 	}
 	ParamReadWrite.ClosePort();
 
-	return m_bParamsWereSent;
+	return CParametersDlg::PutParametersToDevice();
 }
