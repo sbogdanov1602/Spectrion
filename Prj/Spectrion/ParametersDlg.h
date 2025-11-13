@@ -65,4 +65,6 @@ public:
 	//afx_msg void OnCbnSelchangeCmbSpeed();
 	//afx_msg void OnCbnSelchangeCmbPort();
 	afx_msg void OnBnClickedCancel();
+	CMFCButton m_BtnPut;
+	CMFCButton m_BtnLoad;
 };
