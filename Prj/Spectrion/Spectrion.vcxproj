@@ -196,6 +196,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DeviceTypeDlg.h" />
     <ClInclude Include="COMParamsDlg.h" />
     <ClInclude Include="Experiment.h" />
     <ClInclude Include="ExperimentSelectionDlg.h" />
@@ -250,6 +251,7 @@
     <ClInclude Include="Timers.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DeviceTypeDlg.cpp" />
     <ClCompile Include="CFileToCchDialog.cpp" />
     <ClCompile Include="colors.cpp" />
     <ClCompile Include="CommonFunc.cpp" />
