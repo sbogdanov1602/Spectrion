@@ -13,9 +13,9 @@ class CParametersDlg : public CDialog
 	DECLARE_DYNAMIC(CParametersDlg)
 
 public:
-	CParametersDlg(CWnd* pParent = nullptr, map<int, Ui_Parameter>* paramValues = nullptr);   // standard constructor
+	CParametersDlg(CWnd* pParent = nullptr, map<int, Parameter>* paramValues = nullptr/*map<int, Ui_Parameter>* paramValues = nullptr*/);   // standard constructor
 	virtual ~CParametersDlg();
-	void RefreshDialog(map<int, Ui_Parameter>* paramValues);
+	void RefreshDialog(map<int, Parameter>* paramValues/*map<int, Ui_Parameter>* paramValues*/);
 
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
@@ -26,7 +26,7 @@ protected:
 	CGridCtrl m_Grid;
 	CSize m_szMinimum;
 	map<int, int> m_RowParam;
-	map<int, Ui_Parameter>* m_pExternalParamValues;
+	/*map<int, Ui_Parameter>* */ map<int, Parameter>* m_pExternalParamValues;
 	map<int, Ui_Parameter> m_ParamValues;
 	GroupMap* m_groupMapRef;
 	GroupParameterInfosMap* m_groupParamsRef;
