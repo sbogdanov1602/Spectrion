@@ -13,9 +13,11 @@ class CParametersDlg : public CDialog
 	DECLARE_DYNAMIC(CParametersDlg)
 
 public:
-	CParametersDlg(CWnd* pParent = nullptr, map<int, Parameter>* paramValues = nullptr/*map<int, Ui_Parameter>* paramValues = nullptr*/);   // standard constructor
+	CParametersDlg(CWnd* pParent = nullptr, map<int, Parameter>* paramValues = nullptr, bool blocked = false);   // standard constructor
 	virtual ~CParametersDlg();
-	void RefreshDialog(map<int, Parameter>* paramValues/*map<int, Ui_Parameter>* paramValues*/);
+
+	void RefreshDialog(map<int, Parameter>* paramValues, bool blocked = false);
+	bool IsBlocked() { return m_bBlocked; }
 
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
@@ -23,6 +25,9 @@ public:
 #endif
 
 protected:
+	CString m_sModeName;
+	CString m_sExperiment;
+	bool m_bBlocked;
 	CGridCtrl m_Grid;
 	CSize m_szMinimum;
 	map<int, int> m_RowParam;
@@ -47,6 +52,7 @@ protected:
 	void ReturnDataBack();
 	void LoadData();
 	void PrepareGridAndRefresh();
+	void BlockDialog();
 
 	virtual bool LoadParametersFromDevice();
 	virtual bool PutParametersToDevice();
