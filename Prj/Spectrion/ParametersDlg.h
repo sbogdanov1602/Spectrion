@@ -41,6 +41,7 @@ protected:
 
 	COLORREF m_defaultBkColour;
 	COLORREF m_changedBkColour;
+	COLORREF m_notSaveBkColour;
 
 	void PrepareGrid();
 
