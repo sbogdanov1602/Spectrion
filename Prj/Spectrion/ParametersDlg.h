@@ -8,7 +8,7 @@ const int C_PARAMETERS_VALUE = 1;
 
 // ParametersDlg dialog
 
-class CParametersDlg : public CDialog
+class CParametersDlg : public CDialogEx
 {
 	DECLARE_DYNAMIC(CParametersDlg)
 
@@ -60,6 +60,7 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 
+	BOOL GetTitleBarRect(RECT& rcTitleBar);
 public:
 	afx_msg void OnSize(UINT nType, int cx, int cy);
 	afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
@@ -72,6 +73,8 @@ public:
 	//afx_msg void OnCbnSelchangeCmbSpeed();
 	//afx_msg void OnCbnSelchangeCmbPort();
 	afx_msg void OnBnClickedCancel();
+	afx_msg void OnNcPaint();
+
 	CMFCButton m_BtnPut;
 	CMFCButton m_BtnLoad;
 };
