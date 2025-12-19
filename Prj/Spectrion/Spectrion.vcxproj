@@ -233,7 +233,6 @@
     <ClInclude Include="ParametersDlg.h" />
     <ClInclude Include="ParametersMinusDlg.h" />
     <ClInclude Include="ParametersPlusDlg.h" />
-    <ClInclude Include="ParametersStdDlg.h" />
     <ClInclude Include="ParamReadWrite.h" />
     <ClInclude Include="ParamsDlg.h" />
     <ClInclude Include="pch.h" />
@@ -282,7 +281,6 @@
     <ClCompile Include="ParametersDlg.cpp" />
     <ClCompile Include="ParametersMinusDlg.cpp" />
     <ClCompile Include="ParametersPlusDlg.cpp" />
-    <ClCompile Include="ParametersStdDlg.cpp" />
     <ClCompile Include="ParamReadWrite.cpp" />
     <ClCompile Include="ParamsDlg.cpp" />
     <ClCompile Include="pch.cpp">
