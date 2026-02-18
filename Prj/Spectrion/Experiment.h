@@ -9,11 +9,13 @@ public:
 
 	CString m_ExperimentName;
 	CString m_ExperimentDir;
-	map<int, Ui_Parameter> m_ParamValues;
+	int    m_iModePlus;
+	//map<int, Ui_Parameter> m_ParamValues;
+	map<int, Parameter> m_ParamValues;
 	void InitDeviceParameters();
 	void LoadDeviceParameters();
 	void SaveDeviceParameters();
-	void Init();
+	void Init(int modePlus = -1);
 	void Save();
 	void Load();
 	bool LoadParametersFromDevice();
