@@ -65,7 +65,7 @@ public:
 	afx_msg void OnSize(UINT nType, int cx, int cy);
 	afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 	afx_msg void OnEndEditGrid(NMHDR* pNotifyStruct, LRESULT* result);
-	afx_msg void CParametersDlg::OnBeginEditGrid(NMHDR* pNotifyStruct, LRESULT* result);
+	afx_msg void OnBeginEditGrid(NMHDR* pNotifyStruct, LRESULT* result);
 	afx_msg void OnBnClickedBtnPutToController();
 	afx_msg void OnBnClickedBtnLoadFromController();
 	//CComboBox m_PortName;
@@ -78,3 +78,14 @@ public:
 	CMFCButton m_BtnPut;
 	CMFCButton m_BtnLoad;
 };
+
+
+void CParametersDlg::OnBeginEditGrid(NMHDR* pNotifyStruct, LRESULT* result)
+{
+    // handler implementation
+}
+
+BEGIN_MESSAGE_MAP(CParametersDlg, CDialogEx)
+    // use the correct ON_NOTIFY / ON_NOTIFY_EX macro and notification id for your grid control
+    ON_NOTIFY(GVN_BEGINLABELEDIT, IDC_MYGRID, &CParametersDlg::OnBeginEditGrid)
+END_MESSAGE_MAP()
