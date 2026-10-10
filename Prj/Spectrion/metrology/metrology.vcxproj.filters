@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pd_alg">
+      <UniqueIdentifier>{424019be-7534-429a-b454-e673cce730af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{f71c1da1-b48a-463d-95d2-08a518799c8b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pd_alg\pd_alg.h">
+      <Filter>pd_alg</Filter>
+    </ClInclude>
+    <ClInclude Include="pd_alg\pd_data.h">
+      <Filter>pd_alg</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pd_alg\pd_alg.cpp">
+      <Filter>pd_alg</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint">
+      <Filter>stdafx</Filter>
+    </None>
+  </ItemGroup>
+</Project>
