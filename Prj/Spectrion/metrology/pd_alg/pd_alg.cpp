@@ -17,7 +17,7 @@ int  PDAlg::PeakCount = {};
 int  PDAlg::FDataLength = {0};
 int  PDAlg::ExtremCount{0};
 int  PDAlg::CurrentDataLength{};
-int  PDAlg::NoiseRate{};
+double  PDAlg::NoiseRate{};
 int  PDAlg::NoiseLevel;
 int  PDAlg::DRNoiseLevel;
 int  PDAlg::DRLimit{};
@@ -161,7 +161,7 @@ METROLOGY_API std::vector<TPeak> PDAlg::PeaksDetecting(int* RawData, int RawData
 	Resolution = 0;
 	DispRate = 0;
 	//NoiseRate = 3;
-	NoiseRate = PDAlgParams->iNoiseRate;
+	NoiseRate = PDAlgParams->dNoiseRate;
 	DispFiltered = false;
 	PeakWidth = 1;
 	NoiseLevel = PDAlgParams->iNoiseLevel;

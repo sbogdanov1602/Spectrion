@@ -25,7 +25,7 @@ typedef struct pdalgprm{
 	int iDRLimit; // Factor of dynamic range limit
 	double dFilterUpLimit{}; // IGNORED if iFilterWinCount==0
 	double dFilterLowLimit{}; // IGNORED if iFilterWinCount==0
-	int iNoiseRate{};
+	double dNoiseRate{};
 
 	pdalgprm()
 	{
@@ -36,7 +36,7 @@ typedef struct pdalgprm{
 		iFilterWinCount=0;
         iMaxPeakCount=0;
         iDRLimit=0;
-		iNoiseRate = 3;
+		dNoiseRate = 3.0;
 	}
 } TPDAlgParams;
 

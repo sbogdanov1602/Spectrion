@@ -40,7 +40,7 @@ class PDAlg
 	static int PeakCount;
 	static int FDataLength;
 	static int CurrentDataLength;
-	static int NoiseRate;
+	static double NoiseRate;
 	static int PeakWidth;
 	static int ExtremCount;
 	static int LBound;
