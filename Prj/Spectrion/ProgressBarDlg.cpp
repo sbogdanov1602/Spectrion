@@ -11,13 +11,14 @@
 
 IMPLEMENT_DYNAMIC(ProgressBarDlg, CDialog)
 
-ProgressBarDlg::ProgressBarDlg(CWnd* pParent /*=nullptr*/, LPCTSTR processName /*=L""*/, int maxBarValue /*=100*/, int step /*=1*/)
+ProgressBarDlg::ProgressBarDlg(CWnd* pParent /*=nullptr*/, LPCTSTR processName /*=L""*/, int maxBarValue /*=100*/, int step /*=1*/, bool blockStopButton/* = false*/)
 	: CDialog(IDD_PROGRESS_BAR_DLG, pParent)
 {
 	m_MaxBarValue = maxBarValue;
 	m_Step = step;
 	m_ProcessName = processName;
 	m_Stopped = false;
+	m_BlockStopButton = blockStopButton;
 }
 
 ProgressBarDlg::~ProgressBarDlg()
@@ -32,7 +33,18 @@ void ProgressBarDlg::DoDataExchange(CDataExchange* pDX)
 
 BOOL ProgressBarDlg::OnInitDialog()
 {
+	
 	CDialog::OnInitDialog();
+	CMenu* pSysMenu = GetSystemMenu(FALSE);
+	if (pSysMenu != NULL)
+	{
+		pSysMenu->DeleteMenu(SC_CLOSE, MF_BYCOMMAND);
+	}
+	if (m_BlockStopButton) {
+		GetDlgItem(IDABORT)->EnableWindow(false);
+		GetDlgItem(IDABORT)->ShowWindow(SW_HIDE);
+	}
+
 	GetDlgItem(IDC_PROCESS_NAME)->SetWindowText(m_ProcessName);
 	m_ProgressBar.SetRange(0, m_MaxBarValue);
 	m_ProgressBar.SetStep(m_Step);

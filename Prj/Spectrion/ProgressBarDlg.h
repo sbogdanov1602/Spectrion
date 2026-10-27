@@ -9,7 +9,7 @@ class ProgressBarDlg : public CDialog
 	DECLARE_DYNAMIC(ProgressBarDlg)
 
 public:
-	ProgressBarDlg(CWnd* pParent = nullptr, LPCTSTR processName = L"", int maxBarValue = 100, int step = 1);   // standard constructor
+	ProgressBarDlg(CWnd* pParent = nullptr, LPCTSTR processName = L"", int maxBarValue = 100, int step = 1, bool blockStopButton = false);   // standard constructor
 	virtual ~ProgressBarDlg();
 
 // Dialog Data
@@ -23,6 +23,7 @@ protected:
 	int m_Step;
 	CString m_ProcessName;
 	bool m_Stopped;
+	bool m_BlockStopButton;
 
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	virtual BOOL OnInitDialog();
