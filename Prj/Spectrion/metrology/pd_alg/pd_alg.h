@@ -5,6 +5,7 @@
 #endif
 
 #include "../metrology/pd_alg/pd_data.h"
+#include <vector>
 
 typedef struct peakinside {
 	int Extrem;  //В качестве значений фактические индескы в массиве Data
