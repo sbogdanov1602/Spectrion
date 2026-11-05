@@ -1,11 +1,14 @@
-﻿#ifdef METROLOGY_EXPORTS
+﻿
+#ifdef METROLOGY_EXPORTS
 #define METROLOGY_API __declspec(dllexport)
 #else
 #define METROLOGY_API __declspec(dllimport)
 #endif
 
+
+//#define METROLOGY_API 
+
 #include "../metrology/pd_alg/pd_data.h"
-#include <vector>
 
 typedef struct peakinside {
 	int Extrem;  //В качестве значений фактические индескы в массиве Data

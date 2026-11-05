@@ -171,25 +171,15 @@ METROLOGY_API std::vector<TPeak> PDAlg::PeaksDetecting(int* RawData, int RawData
 
 	nErrPoint = 10;
 
-	if (Peaks) {
-		delete[] Peaks;
-		Peaks = nullptr;
-	}
-	if (Extrems) {
-		delete[] Extrems;
-		Extrems = nullptr;
-	}
-	if (ExtremInd) {
-		delete[] ExtremInd;
-		ExtremInd = nullptr;
-	}
-
 	try
 	{
 
-		if ((Peaks == nullptr) || (FDataLength < RawDataLength))
+		if ((Peaks == NULL) || (FDataLength < RawDataLength))
 		{
 			FDataLength = RawDataLength;
+			if (Peaks) delete[] Peaks;
+			if (Extrems) delete[] Extrems;
+			if (ExtremInd) delete[] ExtremInd;
 			Peaks = new TPeakInside[FDataLength];
 			Extrems = new int[CurrentDataLength];
 			ExtremInd = new int[CurrentDataLength];
@@ -222,18 +212,9 @@ METROLOGY_API std::vector<TPeak> PDAlg::PeaksDetecting(int* RawData, int RawData
 		if (!ExtremCount)//случай, когда спектр пустой
 		{
 			//throw 2;
-			if (Peaks) {
-				delete[] Peaks;
-				Peaks = nullptr;
-			}
-			if (Extrems) {
-				delete[] Extrems;
-				Extrems = nullptr;
-			}
-			if (ExtremInd) {
-				delete[] ExtremInd;
-				ExtremInd = nullptr;
-			}
+			//if (Peaks) delete[] Peaks;
+			//if (Extrems) delete[] Extrems;
+			//if (ExtremInd) delete[] ExtremInd;
 			return std::vector<TPeak>();
 		}
 
@@ -531,38 +512,15 @@ METROLOGY_API std::vector<TPeak> PDAlg::PeaksDetecting(int* RawData, int RawData
 			appendedPeak.RightBound = (Peaks[i].ExactRightBound) * GSRation;
 			OutPeaks.push_back(appendedPeak);
 		}
-
-		if (Peaks) {
-			delete[] Peaks;
-			Peaks = nullptr;
-		}
-		if (Extrems) {
-			delete[] Extrems;
-			Extrems = nullptr;
-		}
-		if (ExtremInd) {
-			delete[] ExtremInd;
-			ExtremInd = nullptr;
-		}
-
 		return OutPeaks;
 	}
 	catch (...)
 	{
-
-		if (Peaks) {
-			delete[] Peaks;
-			Peaks = nullptr;
-		}
-		if (Extrems) {
-			delete[] Extrems;
-			Extrems = nullptr;
-		}
-		if (ExtremInd) {
-			delete[] ExtremInd;
-			ExtremInd = nullptr;
-		}
 	};
+
+	if (Peaks) delete[] Peaks;
+	if (Extrems) delete[] Extrems;
+	if (ExtremInd) delete[] ExtremInd;
 
 	return std::vector<TPeak>();
 	/*catch (int nMsgCode)
