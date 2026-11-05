@@ -157,6 +157,8 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <OmitFramePointers>false</OmitFramePointers>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -185,6 +187,8 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)\gridctrl;</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

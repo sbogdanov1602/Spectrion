@@ -65,7 +65,7 @@ public:
 	afx_msg void OnSize(UINT nType, int cx, int cy);
 	afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 	afx_msg void OnEndEditGrid(NMHDR* pNotifyStruct, LRESULT* result);
-	afx_msg void CParametersDlg::OnBeginEditGrid(NMHDR* pNotifyStruct, LRESULT* result);
+	afx_msg void OnBeginEditGrid(NMHDR* pNotifyStruct, LRESULT* result);
 	afx_msg void OnBnClickedBtnPutToController();
 	afx_msg void OnBnClickedBtnLoadFromController();
 	//CComboBox m_PortName;
